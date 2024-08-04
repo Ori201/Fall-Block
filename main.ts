@@ -1,6 +1,6 @@
-let TimeGame = 0
+// TimeGame = 0
 basic.forever(function on_forever(TimeGame: any) {
-    TimeGame += 1
+    // TimeGame += 1
     if (TimeGame < 2) {
         fallLed(1000)
     } else if (TimeGame < 30) {
