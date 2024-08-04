@@ -1,5 +1,11 @@
+TimeGame = 0
+
 def on_forever():
-    fallLed(1000)
+    TimeGame += 1
+    if TimeGame < 10:
+        fallLed(1000)
+    elif TimeGame < 30:
+        fallLed(600)
 basic.forever(on_forever)
 
 Player = game.create_sprite(2, 4)

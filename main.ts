@@ -1,5 +1,12 @@
+let TimeGame = 0
 basic.forever(function on_forever() {
-    fallLed(1000)
+    let TimeGame += 1
+    if (TimeGame < 10) {
+        fallLed(1000)
+    } else if (TimeGame < 30) {
+        fallLed(600)
+    }
+    
 })
 let Player = game.createSprite(2, 4)
 function fallLed(speed: number) {
