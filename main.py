@@ -1,5 +1,4 @@
 def on_forever():
-    speed = 1 * 1000
     fallLed(1000)
 basic.forever(on_forever)
 
@@ -8,16 +7,16 @@ Player = game.create_sprite(2, 4)
 def fallLed(speed):
     Random =  randint(0, 4)
     Block = game.create_sprite(Random, 0)
+    Block.set_direction(0)
 
     i = 0
-    while i == 4:
-        Block.turn(Direction.LEFT, 180)
-        Block.move(1)
+    while i < 4:
         basic.pause(speed)
+        Block.move(-1)
+        i += 1
 
-    Block.turn(Direction.LEFT, 180)
-    Block.move(1)
-    basic.pause(99999999999)
+    basic.pause(speed)
+    i = 0
     Block.delete()
 
 
