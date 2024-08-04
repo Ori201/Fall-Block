@@ -1,8 +1,7 @@
 TimeGame = 0
-
-def on_forever():
+def on_forever(TimeGame):
     TimeGame += 1
-    if TimeGame < 10:
+    if TimeGame < 2:
         fallLed(1000)
     elif TimeGame < 30:
         fallLed(600)
