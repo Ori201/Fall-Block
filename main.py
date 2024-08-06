@@ -1,12 +1,12 @@
 TimeGame = 0
 def on_forever():
-    OLED.write_num_new_line(1)
     TimeGame + 1
     if TimeGame < 10:
         fallLed(1000)
     elif TimeGame < 30:
         fallLed(600)
 basic.forever(on_forever)
+OLED.draw_rectangle(0, 0, 20, 20)
 
 Player = game.create_sprite(2, 4)
 

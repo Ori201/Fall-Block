@@ -1,6 +1,5 @@
 let TimeGame = 0
 basic.forever(function on_forever() {
-    OLED.writeNumNewLine(1)
     TimeGame + 1
     if (TimeGame < 10) {
         fallLed(1000)
@@ -9,6 +8,7 @@ basic.forever(function on_forever() {
     }
     
 })
+OLED.drawRectangle(0, 0, 20, 20)
 let Player = game.createSprite(2, 4)
 function fallLed(speed: number) {
     let Random = randint(0, 4)
