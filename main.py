@@ -1,5 +1,6 @@
 TimeGame = 0
 def on_forever():
+    OLED.write_num_new_line(1)
     TimeGame + 1
     if TimeGame < 10:
         fallLed(1000)
